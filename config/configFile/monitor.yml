@@ -1,0 +1,22 @@
+InfluxDBConfig:
+  # Store the URL of your InfluxDB instance
+  Url: "http://localhost:8086"
+  Org: "pk"
+  Bucket: "test"
+  # 此token是基于monitor字符生成的，在8086面板找到的，踩坑。。
+  Token: "8u0-fohWmLvTbLVthCAUwVaWsve-yS3TsmXHrcTpU-enHtpA1-DmXZvfnapKwOYGuN3SNEA_k4SvvuuBPBkf8w=="
+
+JWTConfig:
+  # JWT密钥
+  JWTSecret: "monitor"
+  # second
+  ExpireTime: 300
+  Issuer: "pk"
+
+ServerConfig:
+  Port: "8888"
+  UpstreamInstances: ["127.0.0.1", ]
+  DownstreamInstances: ["127.0.0.1:8080", "127.0.0.1:8081", "127.0.0.1:8082"]
+
+
+# RedisConfig:
