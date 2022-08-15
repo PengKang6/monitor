@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"monitor/api"
+	"monitor/api/flow"
 	"monitor/config"
 )
 
@@ -13,9 +13,16 @@ func buildRoute(r *gin.Engine) {
 	r.GET("/get/*realUrl", api.Get)
 	r.POST("/post/*realUrl", api.Post)
 
+	//主页数据接口
+	r.GET("/index", api.Index)
+
 	//看板接口
 
-	//管理接口
+	//配置接口
+	r.GET("/configShow", api.ConfigShow)
+
+	//面板接口
+	r
 }
 
 func InitRoute(config config.ServerConfig) {

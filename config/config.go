@@ -11,6 +11,7 @@ type Configs struct {
 	InfluxDBConfig
 	JWTConfig
 	ServerConfig
+	
 }
 
 type InfluxDBConfig struct {
